@@ -12,6 +12,8 @@
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
+    "@floating-ui/react-dom": "^2.1.8",
+    "@floating-ui/utils": "^0.2.11",
     "@orama/core": "^1.2.19",
     "@react-router/node": "^7.13.1",
     "@react-router/serve": "^7.13.1",
@@ -24,8 +26,11 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router": "^7.13.1",
+    "reselect": "^5.1.1",
+    "tabbable": "^6.4.0",
     "tailwind-merge": "^3.5.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "use-sync-external-store": "^1.6.0"
   },
   "overrides": {
     "path-to-regexp": "^8.3.0"
