@@ -1,6 +1,6 @@
 # Jone
 
-shadcn/baseui UI library: copy-paste components for React apps.
+Base UI & React Aria UI library: copy-paste components for React apps.
 
 ## Development
 

@@ -1,6 +1,6 @@
 {
   "name": "jone",
-  "description": "Jone - shadcn/baseui UI library",
+  "description": "Jone - Base UI & React Aria UI library",
   "private": true,
   "type": "module",
   "scripts": {

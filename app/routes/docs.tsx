@@ -72,7 +72,7 @@ export default function Page({ loaderData }: Route.ComponentProps) {
           transform: (option) => {
             const icons: Record<string, ReactNode> = {
               baseui: <Package2 className="size-4" />,
-              shadcn: <LayoutGrid className="size-4" />,
+              'react-aria': <LayoutGrid className="size-4" />,
             };
             const slug = option.url.replace('/docs/', '').split('/')[0];
             return { ...option, icon: icons[slug] ?? option.icon };

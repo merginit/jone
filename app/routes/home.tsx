@@ -5,8 +5,8 @@ import { baseOptions } from '@/lib/layout.shared';
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: 'Jone - shadcn/baseui UI Library' },
-    { name: 'description', content: 'Jone - shadcn/baseui UI library documentation.' },
+    { title: 'Jone - Base UI & React Aria UI Library' },
+    { name: 'description', content: 'Jone - Base UI & React Aria UI library documentation.' },
   ];
 }
 
@@ -16,7 +16,7 @@ export default function Home() {
       <div className="p-4 flex flex-col items-center justify-center text-center flex-1">
         <h1 className="text-xl font-bold mb-2">Jone</h1>
         <p className="text-fd-muted-foreground mb-4">
-          shadcn/baseui UI library documentation.
+          Base UI & React Aria UI library documentation.
         </p>
         <Link
           className="text-sm bg-fd-primary text-fd-primary-foreground rounded-full font-medium px-4 py-2.5"
