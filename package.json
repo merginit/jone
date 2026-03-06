@@ -1,6 +1,7 @@
 {
   "name": "jone",
   "description": "Jone - Base UI & React Aria UI library",
+  "license": "MIT",
   "private": true,
   "type": "module",
   "scripts": {
