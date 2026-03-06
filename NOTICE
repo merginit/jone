@@ -6,6 +6,7 @@ This project extends components from the following third-party works:
 React Aria (Adobe)
   * SOURCE: https://github.com/adobe/react-spectrum
   * LICENSE: Apache-2.0 (see LICENSES/react-aria/Apache-2.0.txt)
+  * NOTICE: https://raw.githubusercontent.com/adobe/react-spectrum/refs/heads/main/NOTICE.txt
 
   Copyright 2019 Adobe. Licensed under the Apache License, Version 2.0.
 
