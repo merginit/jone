@@ -28,6 +28,12 @@
       "@/*": [
         "./app/*"
       ],
+      "@base-ui/utils/*": [
+        "./app/lib/base-ui/*"
+      ],
+      "@base-ui/react/*": [
+        "./app/components/base-ui/*"
+      ],
       "react-router": [
         "./node_modules/react-router/dist/development/index.d.ts"
       ],
