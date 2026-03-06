@@ -1,5 +1,6 @@
 {
   "name": "jone",
+  "description": "Jone - shadcn/baseui UI library",
   "private": true,
   "type": "module",
   "scripts": {

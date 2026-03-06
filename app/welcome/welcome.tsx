@@ -9,12 +9,12 @@ export function Welcome() {
           <div className="w-[500px] max-w-[100vw] p-4">
             <img
               src={logoLight}
-              alt="React Router"
+              alt="Jone"
               className="block w-full dark:hidden"
             />
             <img
               src={logoDark}
-              alt="React Router"
+              alt="Jone"
               className="hidden w-full dark:block"
             />
           </div>
@@ -68,8 +68,8 @@ const resources = [
     ),
   },
   {
-    href: "https://rmx.as/discord",
-    text: "Join Discord",
+    href: "https://base-ui.com",
+    text: "Base UI",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

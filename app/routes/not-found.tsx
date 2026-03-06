@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { baseOptions } from '@/lib/layout.shared';
 
 export function meta({}: Route.MetaArgs) {
-  return [{ title: 'Not Found' }];
+  return [{ title: 'Not Found | Jone' }];
 }
 
 export default function NotFound() {
@@ -17,7 +17,7 @@ export default function NotFound() {
           className="text-sm bg-fd-primary text-fd-primary-foreground rounded-full font-medium px-4 py-2.5"
           to="/docs"
         >
-          Back to Docs
+          Back to Jone
         </Link>
       </div>
     </HomeLayout>
