@@ -40,7 +40,7 @@ export function Tabs(props: TabsProps) {
 }
 
 const tabListStyles = tv({
-  base: 'flex max-w-full p-1 -m-1 overflow-x-auto overflow-y-clip [scrollbar-width:none]',
+  base: 'flex flex-wrap p-1 -m-1',
   variants: {
     orientation: {
       horizontal: 'flex-row',
