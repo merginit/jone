@@ -55,6 +55,9 @@ export { Tree, TreeItem } from '@/components/react-aria/Tree';
 
 export { DialogTrigger, Heading, TooltipTrigger } from 'react-aria-components';
 
+// Documentation-specific demo components
+export { ColorFieldDemo } from '@/components/docs/colorFieldDemo';
+
 // Documentation-specific MDX components
 export { Subtitle } from '@/components/docs/Subtitle';
 export { Meta } from '@/components/docs/Meta';

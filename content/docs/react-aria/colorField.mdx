@@ -6,46 +6,53 @@ description: React Aria ColorField component
 ## Preview
 
 <ComponentPreview>
-  <ColorField label="Color" defaultValue="#ff0000" />
+  <ColorFieldDemo />
 </ComponentPreview>
 
 ## Source Code
 
 ```tsx title="ColorField.tsx"
 'use client';
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   ColorField as AriaColorField,
   type ColorFieldProps as AriaColorFieldProps,
+  ColorFieldStateContext,
   type ValidationResult
 } from 'react-aria-components';
-import { tv } from 'tailwind-variants';
-import { Description, FieldError, Input, Label, fieldBorderStyles } from '@/components/react-aria/Field';
-import { composeTailwindRenderProps, focusRing } from '@/lib/react-aria/utils';
-
-const inputStyles = tv({
-  extend: focusRing,
-  base: 'border-1 rounded-lg min-h-9 font-sans text-sm py-0 px-3 box-border transition [-webkit-tap-highlight-color:transparent]',
-  variants: {
-    isFocused: fieldBorderStyles.variants.isFocusWithin,
-    isInvalid: fieldBorderStyles.variants.isInvalid,
-    isDisabled: fieldBorderStyles.variants.isDisabled
-  }
-});
+import { Description, FieldError, FieldGroup, Input, Label } from '@/components/react-aria/Field';
+import { ColorSwatch } from '@/components/react-aria/ColorSwatch';
+import { composeTailwindRenderProps } from '@/lib/react-aria/utils';
 
 export interface ColorFieldProps extends AriaColorFieldProps {
   label?: string;
   description?: string;
   errorMessage?: string | ((validation: ValidationResult) => string);
+  showSwatch?: boolean;
+  swatchContent?: React.ReactNode;
+}
+
+function InlineSwatch() {
+  const state = useContext(ColorFieldStateContext);
+  if (!state?.colorValue) return null;
+  return (
+    <ColorSwatch
+      color={state.colorValue}
+      className="w-6 h-6 shrink-0 rounded-md border border-black/10 mr-2"
+    />
+  );
 }
 
 export function ColorField(
-  { label, description, errorMessage, ...props }: ColorFieldProps
+  { label, description, errorMessage, showSwatch = true, swatchContent, ...props }: ColorFieldProps
 ) {
   return (
     <AriaColorField {...props} className={composeTailwindRenderProps(props.className, 'flex flex-col gap-1 font-sans')}>
       {label && <Label>{label}</Label>}
-      <Input className={inputStyles} />
+      <FieldGroup>
+        <Input />
+        {showSwatch && (swatchContent ?? <InlineSwatch />)}
+      </FieldGroup>
       {description && <Description>{description}</Description>}
       <FieldError>{errorMessage}</FieldError>
     </AriaColorField>
@@ -60,3 +67,5 @@ export function ColorField(
 | `label?` | `string` | `-` | - |
 | `description?` | `string` | `-` | - |
 | `errorMessage?` | `string \| ((validation: ValidationResult) => string)` | `-` | - |
+| `showSwatch?` | `boolean` | `true` | Show a color swatch preview inside the field |
+| `swatchContent?` | `React.ReactNode` | `-` | Custom content to replace the default swatch (e.g. a ColorPicker trigger) |
