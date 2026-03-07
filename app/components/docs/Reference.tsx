@@ -24,7 +24,7 @@ export function Reference({ component, parts }: ReferenceProps) {
   const partsToRender = parts ? parts.split(',').map(p => p.trim()) : Object.keys(componentApi);
 
   return (
-    <div className="flex flex-col gap-12 mt-8">
+    <div className="not-prose flex flex-col gap-12">
       {partsToRender.map(part => {
         const props = componentApi[part];
         if (!props || props.length === 0) return null;

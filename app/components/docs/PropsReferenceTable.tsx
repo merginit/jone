@@ -9,7 +9,7 @@ export function PropsReferenceTable({ data, type = 'props' }: PropsReferenceTabl
   if (!data || Object.keys(data).length === 0) return null;
 
   return (
-    <div className="flex flex-col gap-4 mt-8 mb-8">
+    <div className="not-prose flex flex-col gap-4">
       <div className="relative w-full overflow-auto rounded-lg border bg-fd-background shadow-sm">
         <table className="w-full text-sm">
           <thead className="bg-fd-muted/50 border-b">
